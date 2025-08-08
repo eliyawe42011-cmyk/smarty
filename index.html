@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smarty</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>Smarty</h1>
+      <div id="local-clock" class="local-clock"></div>
+    </header>
+
+    <nav class="tabs">
+      <button data-tab="world" class="tab-btn active">World Clock</button>
+      <button data-tab="alarm" class="tab-btn">Alarm</button>
+      <button data-tab="timer" class="tab-btn">Timer</button>
+      <button data-tab="stopwatch" class="tab-btn">Stopwatch</button>
+    </nav>
+
+    <main>
+      <!-- World Clock -->
+      <section id="world" class="tab-content active">
+        <div class="section-head">
+          <h2>World Clock</h2>
+          <button id="add-city" class="chip-btn">+ Add City</button>
+        </div>
+        <ul id="world-list" class="list"></ul>
+      </section>
+
+      <!-- Alarm -->
+      <section id="alarm" class="tab-content">
+        <div class="section-head">
+          <h2>Alarm</h2>
+          <button id="add-alarm" class="chip-btn">+ Add Alarm</button>
+        </div>
+        <ul id="alarm-list" class="list"></ul>
+      </section>
+
+      <!-- Timer -->
+      <section id="timer" class="tab-content">
+        <h2>Timer</h2>
+        <div class="timer-container">
+          <svg class="progress-ring" width="240" height="240" viewBox="0 0 120 120">
+            <circle class="ring-bg" r="52" cx="60" cy="60" />
+            <circle class="ring" r="52" cx="60" cy="60" />
+          </svg>
+          <div id="timer-display" class="timer-display">00:00</div>
+        </div>
+        <div class="controls">
+          <button id="set-timer" class="pill">Set</button>
+          <button id="start-pause-timer" class="pill">Start</button>
+          <button id="reset-timer" class="pill">Reset</button>
+        </div>
+      </section>
+
+      <!-- Stopwatch -->
+      <section id="stopwatch" class="tab-content">
+        <h2>Stopwatch</h2>
+        <div id="sw-display" class="sw-display">00:00.00</div>
+        <div class="controls">
+          <button id="start-pause-sw" class="pill">Start</button>
+          <button id="lap-sw" class="pill">Lap</button>
+          <button id="reset-sw" class="pill">Reset</button>
+        </div>
+        <ul id="lap-list" class="list"></ul>
+      </section>
+    </main>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay hidden"></div>
+
+  <!-- Modal container (reused) -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-head"><h3 id="modal-title"></h3></div>
+    <div id="modal-body"></div>
+    <div class="modal-actions">
+      <button id="modal-cancel" class="pill alt">Cancel</button>
+      <button id="modal-ok" class="pill">OK</button>
+    </div>
+  </div>
+
+  <script src="cordova.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

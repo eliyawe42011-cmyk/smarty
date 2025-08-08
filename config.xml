@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.smarty.clock" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Smarty</name>
+  <description>Minimalist Clock Suite with background timers and alarms</description>
+  <author email="you@example.com">You</author>
+  <content src="index.html" />
+  <preference name="Orientation" value="portrait" />
+  <preference name="BackgroundColor" value="0xffffffff" />
+  <preference name="AndroidPersistentFileLocation" value="Internal" />
+  <preference name="GradlePluginKotlinEnabled" value="true" />
+  <allow-intent href="*" />
+  <platform name="android">
+    <allow-intent href="market:*" />
+  </platform>
+
+  <plugin name="cordova-plugin-local-notification" spec="0.9.0-beta.3" />
+  <plugin name="cordova-plugin-background-mode" spec="^0.7.3" />
+</widget>

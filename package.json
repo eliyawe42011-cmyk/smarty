@@ -1,0 +1,13 @@
+{
+  "name": "smarty-cordova",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Smarty clock suite (Cordova)",
+  "scripts": {
+    "prepare": "cordova prepare",
+    "build:android": "cordova build android"
+  },
+  "devDependencies": {
+    "cordova": "^12.0.0"
+  }
+}
